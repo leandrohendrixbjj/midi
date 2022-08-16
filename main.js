@@ -1,5 +1,5 @@
-document.querySelector(".tecla_pom").addEventListener('click',(event) => {
-    event.preventDefault();
-    alert('Here');
-});
+function playPom(){
+    document.querySelector("#som_tecla_pom").play();
+}
+
 
