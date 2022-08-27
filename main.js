@@ -4,10 +4,7 @@ function playPom(){
 
 //document.querySelector(".tecla_pom").onclick = playPom;
 
-let list = document.querySelectorAll('.tecla');
+let keyboardList = document.querySelectorAll('.tecla');
 
-list.forEach(l => {
-    console.log(l);
-});
 
 
