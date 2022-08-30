@@ -6,5 +6,7 @@ function playPom(){
 
 let keyboardList = document.querySelectorAll('.tecla');
 
-
-
+for(let row in keyboardList){
+    console.log(keyboardList[row]);
+   keyboardList[row].onclick = playPom;
+}
