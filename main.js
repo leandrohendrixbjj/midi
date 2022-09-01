@@ -1,12 +1,12 @@
 function playPom(){
-    document.querySelector("#som_tecla_pom").play();
+    document.querySelector("#som_tecla_clap").play();
 }
 
-//document.querySelector(".tecla_pom").onclick = playPom;
-
 let keyboardList = document.querySelectorAll('.tecla');
+let cont = 0;
 
-for(let row in keyboardList){
-    console.log(keyboardList[row]);
-   keyboardList[row].onclick = playPom;
+
+while(cont < keyboardList.length){ 
+  keyboardList[cont].onclick = playPom;    
+  cont++;
 }
