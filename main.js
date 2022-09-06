@@ -1,5 +1,6 @@
-function playPom(){
-    document.querySelector("#som_tecla_clap").play();
+function tocaSom(idElementoAudio){
+   console.log(idElementoAudio);
+    //document.querySelector(idElementoAudio).play();
 }
 
 let keyboardList = document.querySelectorAll('.tecla');
@@ -7,6 +8,6 @@ let cont = 0;
 
 
 while(cont < keyboardList.length){ 
-  keyboardList[cont].onclick = playPom;    
+  keyboardList[cont].onclick = tocaSom;    
   cont++;
 }
