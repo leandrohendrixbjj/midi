@@ -14,3 +14,13 @@ while (cont < keyboardList.length) {
   }
   cont++;
 }
+for (let row in keyboardList) {
+  if (Number.isInteger(row)) {
+    let btnClassName = keyboardList[row].classList[1];
+
+    keyboardList[row].onclick = () => {
+      tocaSom(`#som_${btnClassName}`);
+    }
+  }
+}
+
