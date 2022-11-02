@@ -3,7 +3,6 @@ function tocaSom(idElementoAudio) {
 }
 
 let keyboardList = document.querySelectorAll('.tecla');
-
 for (let row in keyboardList) {
 
   let tecla = keyboardList[row];
@@ -12,16 +11,19 @@ for (let row in keyboardList) {
     let btnClassName = keyboardList[row].classList['1'];
 
     keyboardList[row].onclick = () => {
-      console.log(btnClassName);
       tocaSom(`#som_${btnClassName}`);
     }
   }
 
-  tecla.onkeydown = () => {
-    tecla.classList.add('ativa');
+  // Teclado Press
+  tecla.onkeydown = (event) => {
+
+    if (event.code == 'Space')
+      tecla.classList.add('ativa');
   }
 
-  tecla.onkeydown = () => {
+  // Teclado Holding
+  tecla.onkeyup = (event) => {
     tecla.classList.remove('ativa');
   }
 }
