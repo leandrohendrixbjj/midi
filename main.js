@@ -17,8 +17,7 @@ for (let row in keyboardList) {
 
   // Teclado Press
   tecla.onkeydown = (event) => {
-
-    if (event.code == 'Space')
+    if (event.code == 'Space' || event.code == 'Enter')
       tecla.classList.add('ativa');
   }
 
