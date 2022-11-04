@@ -1,5 +1,10 @@
 function tocaSom(idElementoAudio) {
-  document.querySelector(idElementoAudio).play();
+  let element = document.querySelector(idElementoAudio);
+
+  if (element == null)
+    alert('Elemento não exsite');
+
+  element.play();
 }
 
 let keyboardList = document.querySelectorAll('.tecla');
